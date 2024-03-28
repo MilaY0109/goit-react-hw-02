@@ -29,13 +29,16 @@ function App() {
     0
   );
 
-  const positiveFeedback =
-    totalFeedback !== 0
-      ? Math.round(
-          ((feedbackCounter.good + feedbackCounter.neutral) / totalFeedback) *
-            100
-        )
-      : 0;
+   const positiveFeedback = Math.round(
+    (feedbackCounter.good / totalFeedback) * 100
+  );
+  // const positiveFeedback =
+  //   totalFeedback !== 0
+  //     ? Math.round(
+  //         ((feedbackCounter.good + feedbackCounter.neutral) / totalFeedback) *
+  //           100
+  //       )
+  //     : 0;
 
   const resetFeedback = () => {
     setFeedbackCounter(feedbackValues);
